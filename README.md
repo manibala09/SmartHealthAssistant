@@ -1,26 +1,31 @@
 # Smart Health Assistant
 
-A Flask-based healthcare recommendation system.
+Smart Health Assistant is a web-based healthcare support application developed using Python Flask. It helps users identify possible causes of common symptoms and provides recommended foods, care tips, BMI calculation, water intake calculation, and search history tracking.
 
 ## Features
 
-- Symptom Analysis
-- Food Recommendations
-- Safety Measures
+- Symptom Checker
+- Health Recommendations
 - BMI Calculator
-- Water Intake Calculator
-- Search History
-- SQLite Database
+- Daily Water Intake Calculator
+- Search History Storage
+- Delete & Clear History
+- Responsive User Interface
 
-## Technologies Used
+## Tech Stack
 
 - Python
 - Flask
 - HTML
 - CSS
 - SQLite
+- GitHub
+- Render
 
-## Disclaimer
+## Live Demo
 
-This project provides educational information only and is not intended for medical diagnosis.
-Consult a healthcare professional if symptoms persist.
+https://smarthealthassistant-ciyi.onrender.com
+
+## Author
+
+Mani Bala
