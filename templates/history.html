@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search History</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/bmi">BMI Calculator</a>
+    <a href="/water">Water Calculator</a>
+    <a href="/history">History</a>
+</div>
+<div class="container">
+
+    <h1>Search History</h1>
+
+    <p style="text-align:center;">
+        <a href="/clear_history" class="clear-btn">
+            Clear All History
+        </a>
+    </p>
+
+    {% if records %}
+
+    <table>
+        
+        <tr>
+            <th>Symptom</th>
+            <th>Date & Time</th>
+            <th>Action</th>
+        </tr>
+
+        {% for row in records %}
+        
+<tr>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+
+    <td>
+        <a href="/delete/{{ row[0] }}">
+            Delete
+        </a>
+    </td>
+</tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <div class="result-box">
+        <h2>No Search History Found</h2>
+        <p>Your searched symptoms will appear here.</p>
+    </div>
+
+    {% endif %}
+
+</div>
+<footer style="text-align:center; margin-top:30px;">
+    <p>Smart Health Assistant © 2026</p>
+</footer>
+</body>
+</html>
